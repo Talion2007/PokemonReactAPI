@@ -1,8 +1,10 @@
 import { useState, useRef } from 'react';
 import axios from 'axios'
+
+import PokemonDisplay from './components/pokemonDisplay/PokemonDisplay';
+
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 function App() {
 
     const inputRef = useRef();
@@ -18,8 +20,6 @@ function App() {
 
         const data = await axios.get(url)
 
-  
-
         setPokemonData(data.data)
 
     console.log(data)
@@ -30,6 +30,7 @@ function App() {
     <div>
         <input ref={inputRef} type='text' placeholder='Search' />
         <button onClick={searchPokemon}>Search</button>
+        <PokemonDisplay pokemonData={pokemonData} />
     </div>
   )
 }
