@@ -1,0 +1,21 @@
+.display-pokemon{
+    background-color: antiquewhite;
+    padding: 1.25vw;
+    width: 77.5vw;
+    border-radius: 0 0 2vw 2vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: darkslategrey;
+        font-size: 2.5em;
+    }
+
+    img {
+        width: 15vw;
+        height: auto;
+    }
+  }

@@ -1,13 +1,13 @@
 body {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-  
-    background-image: url(./assets/pkmn.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  background-image: url("./assets/pokemonBackground.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0d0d0dff;
+}

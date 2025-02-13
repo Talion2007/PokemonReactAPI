@@ -1,26 +1,16 @@
-.header {
+  .header{
+    background-color: darkslategrey;
+    padding: 2.5vw;
+    width: 75vw;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-direction: row;
-  
-    background-color: antiquewhite;
-    padding: 1%;
-    opacity: 80%;
-    width: 98vw;
-    height: auto;
-  
-    position: relative;
-    z-index: 2;
-  
-    img {
-      width: 20%;
-      height: 80%;
-      opacity: 1;
-    }
-  
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    border-radius: 2vw 2vw 0 0;
+
     button {
-      background-color: antiquewhite;
+      background: none;
       border: none;
       color: orangered;
     }
@@ -38,4 +28,9 @@
       text-align: center;
       color: antiquewhite;
     }
-  }
+
+    img {
+      width: 10vw;
+      height: auto;
+    }
+}
