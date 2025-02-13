@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
 import axios from 'axios'
 
-import PokemonDisplay from './components/pokemonDisplay/PokemonDisplay';
-
 import './App.css'
+
+import DisplayPokemon from './components/Displaypokemon';
 
 function App() {
 
@@ -27,12 +27,18 @@ function App() {
     }
 
   return (
-    <div>
+    <>
+    <header className='header'>
         <input ref={inputRef} type='text' placeholder='Search' />
         <button onClick={searchPokemon}>Search</button>
-        <PokemonDisplay pokemonData={pokemonData} />
-    </div>
+      </header>
+
+      <section>
+        <DisplayPokemon pokemonData={pokemonData}/>
+      </section>
+ 
+    </>
   )
 }
 
-export default App
+export default App;

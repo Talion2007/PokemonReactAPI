@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  
+    background-color: antiquewhite;
+    padding: 1%;
+    opacity: 80%;
+    width: 98vw;
+    height: auto;
+  
+    position: relative;
+    z-index: 2;
+  
+    img {
+      width: 20%;
+      height: 80%;
+      opacity: 1;
+    }
+  
+    button {
+      background-color: antiquewhite;
+      border: none;
+      color: orangered;
+    }
+  
+    input {
+      background-color: orangered;
+      text-align: center;
+      border: none;
+      color: antiquewhite;
+      margin-left: 1vw;
+      border-radius: 2.5vw;
+    }
+  
+    input::placeholder {
+      text-align: center;
+      color: antiquewhite;
+    }
+  }
