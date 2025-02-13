@@ -19,3 +19,18 @@
         height: auto;
     }
   }
+
+  .pokemon-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1.25vw;
+    width: 100%;
+
+    p {
+        color: darkslategrey;
+        font-size: 1.25em;
+    }
+  }
