@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import axios from 'axios'
 
 import './App.css'
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+    <Analytics/>
     <header className='header'>
         <input ref={inputRef} type='text' placeholder='Search' />
         <button onClick={searchPokemon}>Search</button>
