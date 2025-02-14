@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import DisplayPokemon from "./components/Displaypokemon";
 import axios from "axios";
 
@@ -42,6 +43,8 @@ function App() {
       </header>
 
         <DisplayPokemon pokemonData={pokemonData} />
+
+        <Analytics/>
     </>
   );
 }
