@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import DisplayPokemon from "./components/Displaypokemon";
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import axios from "axios";
 
+import DisplayPokemon from "./components/Displaypokemon";
 import Logo from "./assets/logo.png";
-
 import "./App.css";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <DisplayPokemon pokemonData={pokemonData} />
 
         <Analytics/>
+        <SpeedInsights/>
     </>
   );
 }
