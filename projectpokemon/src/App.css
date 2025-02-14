@@ -1,7 +1,7 @@
   .header{
     background-color: darkslategrey;
     padding: 2.5vw;
-    width: 75vw;
+    width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;

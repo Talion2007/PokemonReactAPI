@@ -1,5 +1,5 @@
 .display-pokemon{
-    background-color: antiquewhite;
+  background: rgb(250, 235, 215, .95);
     padding: 1.25vw;
     width: 77.5vw;
     border-radius: 0 0 2vw 2vw;
@@ -31,6 +31,29 @@
 
     p {
         color: darkslategrey;
-        font-size: 1.25em;
+        font-size: 1.5em;
+    }
+  }
+
+  .carousel.slide {
+    text-align: center;
+    width: 50vw;
+  
+    .carousel-indicators {
+      .active {
+        background-color: orangered;
+      }
+      button {
+        background-color: darkslategrey;
+      }
+    }
+  
+    .carousel-control-next, .carousel-control-prev {
+      background-color: darkslategrey;
+      border-radius: 2em;
+      width: 2.5vw;
+      height: 5vh;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }

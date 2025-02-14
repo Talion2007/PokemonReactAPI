@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import DisplayPokemon from "./components/Displaypokemon";
 import axios from "axios";
 
@@ -25,12 +25,18 @@ function App() {
     console.log(data);
   }
 
+
+  useEffect(() => {
+    searchPokemon();
+    
+  }, []);
+
   return (
     <>
       <header className="header">
         <img src= {Logo} ></img>
         <div>
-          <input ref={inputRef} type="text" placeholder="Pokemon Name or ID" />
+          <input ref={inputRef} type="text" placeholder="Pokemon Name or ID" defaultValue={"Bulbasaur"}/>
           <button onClick={searchPokemon}>Search</button>
         </div>
       </header>
