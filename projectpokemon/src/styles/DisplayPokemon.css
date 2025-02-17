@@ -1,7 +1,7 @@
 .display-pokemon{
   background: rgb(250, 235, 215, .95);
     padding: 1.25vw;
-    width: 77.5vw;
+    width: auto;
     border-radius: 0 0 2vw 2vw;
 
     display: flex;
@@ -32,6 +32,8 @@
     p {
         color: darkslategrey;
         font-size: 1.5em;
+        width: auto;
+        padding: 1.25vw;
     }
   }
 
@@ -40,6 +42,7 @@
     width: 50vw;
   
     .carousel-indicators {
+      margin-top: 5vh;
       .active {
         background-color: orangered;
       }
@@ -56,4 +59,48 @@
       margin-top: auto;
       margin-bottom: auto;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    .display-pokemon{
+        padding: 0;
+        width: auto;
+        border-radius: 0 0 0 0;
+    
+        h1 {
+            font-size: 2em;
+        }
+    
+        img {
+            width: 20vh;
+            height: auto;
+        }
+      }
+    
+      .pokemon-info {    
+        p {
+            font-size: 1.5em;
+            padding: 1vw;
+        }
+      }
+    
+      .carousel.slide {
+        text-align: center;
+        width: 100vw;
+      
+        .carousel-indicators {
+          margin-top: 5vh;
+          .active {
+            background-color: orangered;
+          }
+          button {
+            background-color: darkslategrey;
+          }
+        }
+      
+        .carousel-control-next, .carousel-control-prev {
+          width: 7.5vw;
+          height: 5vh;
+        }
+      }
   }

@@ -24,7 +24,7 @@ function App() {
 
     setPokemonData(data.data);
 
-    console.log(data);
+    console.log(data.data);
   }
 
 
@@ -38,7 +38,11 @@ function App() {
       <header className="header">
         <img src= {Logo} ></img>
         <div>
-          <input ref={inputRef} type="text" placeholder="Pokemon Name or ID" defaultValue={"Bulbasaur"}/>
+          <input ref={inputRef} type="text" placeholder="Pokemon Name or ID" defaultValue={"Bulbasaur"} onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              searchPokemon();
+            }
+          }}/>
           <button onClick={searchPokemon}>Search</button>
         </div>
       </header>

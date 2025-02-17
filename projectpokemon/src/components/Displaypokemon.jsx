@@ -20,7 +20,7 @@ function DisplayPokemon({ pokemonData }) {
         <h1>{namePokemon}</h1>
         <h1>ID: {pokemonData.id}</h1>
         <div>
-          <Carousel interval={5000}>
+          <Carousel interval={7500}>
             <Carousel.Item>
               <img
                 src={pokemonData.sprites?.front_default}
