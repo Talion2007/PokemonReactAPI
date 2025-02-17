@@ -34,3 +34,38 @@
       height: auto;
     }
 }
+
+@media  screen and (max-width: 768px) {
+  .header{
+    background-color: darkslategrey;
+    padding: 2.5vw;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    border-radius: 2vw 2vw 0 0;
+
+    button {
+      background: none;
+      border: none;
+      color: orangered;
+    }
+  
+    input {
+      width: 40vw;
+    }
+  
+    input::placeholder {
+      text-align: center;
+      color: antiquewhite;
+    }
+
+    img {
+      width: 30vw;
+      height: auto;
+    }
+}
+
+}
