@@ -21,3 +21,10 @@ body {
 html {
   color-scheme: light only;
 }
+
+html, body {
+  -webkit-filter: none !important;
+  filter: none !important;
+  background-blend-mode: normal !important;
+  mix-blend-mode: normal !important;
+}
