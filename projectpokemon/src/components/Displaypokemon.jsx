@@ -30,20 +30,24 @@ function DisplayPokemon({ pokemonData, error }) {
               <img
                 src={pokemonData.sprites?.front_default}
                 alt={pokemonData.name}
+                loading="lazy"
               />
               <img
                 src={pokemonData.sprites?.back_default}
                 alt={pokemonData.name}
+                loading="lazy"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 src={pokemonData.sprites?.front_shiny}
                 alt={pokemonData.name}
+                loading="lazy"
               />
               <img
                 src={pokemonData.sprites?.back_shiny}
                 alt={pokemonData.name}
+                loading="lazy"
               />
             </Carousel.Item>
           </Carousel>

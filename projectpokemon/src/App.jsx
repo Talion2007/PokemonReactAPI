@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <img src={Logo}></img>
+        <img src={Logo} loading="lazy"></img>
         <div>
           <input
             ref={inputRef}
