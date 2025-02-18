@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-around;
     color: white;
-    border-radius: 2vw 2vw 0 0;
 
     button {
       background: none;
@@ -22,6 +21,8 @@
       color: antiquewhite;
       margin-left: 1vw;
       border-radius: 2.5vw;
+      margin-right: 0.1em;
+      margin-left: 0.75em;
     }
   
     input::placeholder {
@@ -39,27 +40,16 @@
   .header{
     background-color: darkslategrey;
     padding: 2.5vw;
+    padding-top: 5vw;
     width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     color: white;
-    border-radius: 2vw 2vw 0 0;
-
-    button {
-      background: none;
-      border: none;
-      color: orangered;
-    }
   
     input {
       width: 40vw;
-    }
-  
-    input::placeholder {
-      text-align: center;
-      color: antiquewhite;
     }
 
     img {

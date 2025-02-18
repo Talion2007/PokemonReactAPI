@@ -45,9 +45,27 @@ function DisplayPokemon({ pokemonData }) {
         </div>
 
         <article className="pokemon-info">
+          <p>
+            Health Points: {pokemonData.stats[0].base_stat}
+          </p>
+          <p>
+            Attack: {pokemonData.stats[1].base_stat}
+          </p>
+          <p>
+            Defense: {pokemonData.stats[2].base_stat}
+          </p>
+          <p>
+            Special Attack: {pokemonData.stats[3].base_stat}
+          </p>
+          <p>
+            Special Defense: {pokemonData.stats[4].base_stat}
+          </p>
+          <p>
+            Speed: {pokemonData.stats[5].base_stat}
+          </p>
+          <p>Base Experience: {pokemonData.base_experience}</p>
           <p>Height: {pokemonData.height / 10} meters</p>
           <p>Weight: {pokemonData.weight / 10} kilograms</p>
-          <p>Base Experience: {pokemonData.base_experience}</p>
           <p>
             Abilities:{" "}
             {pokemonData.abilities
@@ -56,6 +74,9 @@ function DisplayPokemon({ pokemonData }) {
           </p>
           <p>
             Types: {pokemonData.types?.map((type) => type.type.name).join(", ")}{" "}
+          </p>
+          <p>
+            Moves: {pokemonData.moves?.map((move) => move.move.name).join(", ")}{" "}
           </p>
         </article>
       </section>

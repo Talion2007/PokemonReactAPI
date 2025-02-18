@@ -1,7 +1,12 @@
+:root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
 
@@ -10,4 +15,5 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #0d0d0dff;
+  background-attachment: fixed;
 }
