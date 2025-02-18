@@ -19,6 +19,16 @@
     }
   }
 
+  .display-pokemon.error {
+    width: 100vw;
+    height: auto;
+    h1 {
+      color: darkred;
+      padding-bottom: 7.75em;
+      padding-top: 7.75em;
+    }
+  }
+
   .pokemon-info {
     display: flex;
     flex-wrap: wrap;

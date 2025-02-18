@@ -12,6 +12,7 @@ function App() {
   const inputRef = useRef();
 
   const [pokemonData, setPokemonData] = useState({});
+  const [erro, setErro] = useState()
 
   async function searchPokemon() {
     console.log(inputRef.current.value);
@@ -20,18 +21,26 @@ function App() {
 
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
-    const data = await axios.get(url);
+    try {
 
-    setPokemonData(data.data);
+      const data = await axios.get(url);
 
-    console.log(data.data);
+      if (data.status !== 404) {
+        setErro("OK")
+      }
+
+setPokemonData(data.data);
+console.log(data.data);
+
+    } catch(error) {
+      console.log("Fetch Status:",error) 
+      setErro("Error")
+    }
   }
 
-
-  useEffect(() => {
-    searchPokemon();
-    
-  }, []);
+useEffect (() => {
+  searchPokemon();
+} ,[])
 
   return (
     <>
@@ -47,7 +56,7 @@ function App() {
         </div>
       </header>
 
-        <DisplayPokemon pokemonData={pokemonData} />
+        <DisplayPokemon pokemonData={pokemonData} error ={erro}/>
 
         <Analytics/>
         <SpeedInsights/>

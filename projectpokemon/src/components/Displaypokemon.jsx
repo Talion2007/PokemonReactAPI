@@ -3,13 +3,21 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/DisplayPokemon.css";
 
-function DisplayPokemon({ pokemonData }) {
+function DisplayPokemon({ pokemonData, error }) {
   if (!pokemonData || !pokemonData.name)
     return (
-      <section className="display-pokemon">
-        <h1>Pokemon não encontrado ou Carregando...</h1>
+      <section className="display-pokemon error">
+        <h1>Pokemon não encontrado...</h1>
       </section>
     );
+
+    if (error !== "OK") {
+      return (
+        <section className="display-pokemon error">
+          <h1>Pokemon não encontrado...</h1>
+        </section>
+      );
+    }
 
   const namePokemon =
     pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
