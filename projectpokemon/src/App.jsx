@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <>
+    <div data-bs-theme="light">
       <header className="header">
         <img src={Logo} loading="lazy"></img>
         <div>
@@ -53,7 +53,7 @@ function App() {
       <DisplayPokemon pokemonData={pokemonData} error={erro} />
       <Analytics />
       <SpeedInsights />
-    </>
+    </div>
   );
 }
 export default App;
