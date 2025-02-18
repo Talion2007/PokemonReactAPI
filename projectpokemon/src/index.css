@@ -27,4 +27,5 @@ html, body {
   filter: none !important;
   background-blend-mode: normal !important;
   mix-blend-mode: normal !important;
+  forced-color-adjust: none !important;
 }
