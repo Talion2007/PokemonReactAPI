@@ -4,8 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/DisplayPokemon.css";
 
 function DisplayPokemon({ pokemonData, error }) {
-  const namePokemon =
-  pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
   if (!pokemonData || !pokemonData.name)
     return (
       <section className="display-pokemon error">
@@ -19,6 +17,8 @@ function DisplayPokemon({ pokemonData, error }) {
       </section>
     );
   }
+  const namePokemon =
+  pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
   return (
     <>
       <section className="display-pokemon">
