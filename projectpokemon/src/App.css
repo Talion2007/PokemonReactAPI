@@ -1,11 +1,5 @@
 .header{background-color:darkslategrey;padding:2.5vw;display:flex;align-items:center;justify-content:space-around;color:#fff}.header button{background:0 0;border:none;color:orangered}.header input{background-color:orangered;text-align:center;border:none;color:antiquewhite;margin:0 0.1em 0 0.75em;border-radius:2.5vw}.header input::placeholder{text-align:center;color:antiquewhite}.header img{width:10vw}@media screen and (max-width:768px){.header{padding-top:5vw}.header input{width:40vw}.header img{width:30vw}}
 
-@media (prefers-color-scheme: dark) {
-.header {
-  background-color: darkslategrey;
-}
-}
-
 /*
 .header{
     background-color: darkslategrey;
