@@ -21,6 +21,6 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-image: url("./assets/pkmn.png");
-    background-color: darkslategrey;
+    background-color: whitesmoke;
   }
   }
