@@ -3,6 +3,7 @@
 @media (prefers-color-scheme: dark) {
   .display-pokemon{
     background: rgb(250, 235, 215, .95);
+    filter: none;
   }
   }
 
