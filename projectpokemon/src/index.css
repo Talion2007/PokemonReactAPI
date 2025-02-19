@@ -17,3 +17,10 @@ body {
   background-color: #0d0d0dff;
   background-attachment: fixed;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("./assets/pkmn.png");
+    background-color: darkslategrey;
+  }
+  }
