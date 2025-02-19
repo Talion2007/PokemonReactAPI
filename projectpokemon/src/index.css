@@ -19,7 +19,7 @@ body {
 }
 
 html {
-  color-scheme: light only;
+  color-scheme: light !important;
 }
 
 html, body {
