@@ -1,0 +1,3 @@
+# Permitir que todos os bots acessem todo o site
+User-agent: *
+Disallow:
