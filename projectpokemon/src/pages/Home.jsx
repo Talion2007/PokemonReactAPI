@@ -9,7 +9,10 @@ function Home() {
   const [pokemon, setPokemon] = useState(() => JSON.parse(localStorage.getItem("pokemon")) || "bulbasaur");
   const [dadosPokemon, setDadosPokemon] = useState({});
   const [erro, setErro] = useState();
-  const [theme, setTheme] = useState("white");
+  const [theme, setTheme] = useState(() => {
+    const tema = localStorage.getItem('tema');
+    return tema ? JSON.parse(tema) : "white";
+  });
 
   useEffect(() => {
     if (!localStorage.getItem("pokemonsSalvos")) {
@@ -17,18 +20,19 @@ function Home() {
     }
   }, []);
 
-  const buscarPokemon = async () => {
-    try {
-      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-      setDadosPokemon(data);
-      setErro("OK");
-      localStorage.setItem("pokemon", JSON.stringify(pokemon));
-    } catch {
-      setErro("Erro");
+  useEffect(() => {
+    async function fetchPokemon() {
+      try {
+        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+        setDadosPokemon(data);
+        setErro("OK");
+        localStorage.setItem("pokemon", JSON.stringify(pokemon));
+      } catch {
+        setErro("Erro");
+      }
     }
-  };
-
-  useEffect(() => buscarPokemon(), []);
+    fetchPokemon();
+  }, [pokemon]);
 
   const salvarPokemon = () => {
     const pokemonsSalvos = JSON.parse(localStorage.getItem("pokemonsSalvos"));
@@ -52,7 +56,7 @@ function Home() {
             <Link to="/salvos">Pokémons Salvos</Link>
           </button>
           <input onChange={(e) => setPokemon(e.target.value)} placeholder={pokemon} />
-          <button onClick={buscarPokemon}>Buscar</button>
+          <button onClick={() => setPokemon(pokemon)}>Buscar</button>
           <button onClick={salvarPokemon}>Salvar</button>
           <button onClick={toggleTheme}>Tema: {theme === "white" ? "Dark" : "White"}</button>
         </div>
