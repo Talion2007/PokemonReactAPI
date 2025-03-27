@@ -2,13 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0%;
+  padding: 0%;
 }
 
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  width: 100vw;
   margin: 0;
+  padding: 0%;
 
   background-image: url("./assets/pokemonBackground.png");
   background-position: center;
@@ -16,4 +19,11 @@ body {
   background-repeat: no-repeat;
   background-color: #0d0d0dff;
   background-attachment: fixed;
+}
+
+.main{
+  width: auto;
+  min-width: 99vw;
+  padding: 0;
+  margin: 0;
 }

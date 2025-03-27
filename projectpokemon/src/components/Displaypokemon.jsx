@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/DisplayPokemon.css";
 
 function DisplayPokemon({ pokemonData, error }) {
@@ -19,14 +16,14 @@ function DisplayPokemon({ pokemonData, error }) {
   }
   const namePokemon =
   pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
+
   return (
     <>
       <section className="display-pokemon">
         <h1>{namePokemon}</h1>
         <h1>ID: {pokemonData.id}</h1>
         <div>
-          <Carousel interval={7500}>
-            <Carousel.Item>
+          
               <img
                 src={pokemonData.sprites?.front_default}
                 alt={pokemonData.name}
@@ -37,8 +34,7 @@ function DisplayPokemon({ pokemonData, error }) {
                 alt={pokemonData.name}
                 loading="lazy"
               />
-            </Carousel.Item>
-            <Carousel.Item>
+            
               <img
                 src={pokemonData.sprites?.front_shiny}
                 alt={pokemonData.name}
@@ -49,8 +45,7 @@ function DisplayPokemon({ pokemonData, error }) {
                 alt={pokemonData.name}
                 loading="lazy"
               />
-            </Carousel.Item>
-          </Carousel>
+            
         </div>
         <article className="pokemon-info">
           <p>Health Points: {pokemonData.stats[0].base_stat}</p>
