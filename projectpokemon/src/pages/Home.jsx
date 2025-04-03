@@ -10,8 +10,8 @@ function Home() {
   const [dadosPokemon, setDadosPokemon] = useState({});
   const [erro, setErro] = useState();
   const [theme, setTheme] = useState(() => {
-    const tema = localStorage.getItem('tema');
-    return tema ? JSON.parse(tema) : "white";
+    const temaSalvo = localStorage.getItem("teme");
+    return temaSalvo ? temaSalvo : "white";
   });
 
   useEffect(() => {
@@ -46,13 +46,13 @@ function Home() {
   };
 
   const alternarTema = () => {
-    const novoTema = tema === "claro" ? "escuro" : "claro";
-    setTema(novoTema);
-    localStorage.setItem("tema", novoTema);
+    const novoTema = theme === "white" ? "dark" : "white";
+    setTheme(novoTema);
+    localStorage.setItem('tema', JSON.stringify(theme));
   };
 
   return (
-    <div className={`main ${tema}`}>
+    <div className={`main ${theme}`}>
       <header className="header">
         <img src={Logo} alt="Logo Pokémon" loading="lazy" />
         <div>
@@ -62,7 +62,7 @@ function Home() {
           <input onChange={(e) => setPokemon(e.target.value)} placeholder={pokemon} />
           <button onClick={() => setPokemon(pokemon)}>Buscar</button>
           <button onClick={salvarPokemon}>Salvar</button>
-          <button onClick={alternarTema}>Tema: {tema === "claro" ? "Escuro" : "Claro"}</button>
+          <button onClick={alternarTema}>Alterar tema</button>
         </div>
       </header>
       <DisplayPokemon pokemonData={dadosPokemon} error={erro} />

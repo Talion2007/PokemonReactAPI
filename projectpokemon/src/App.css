@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: space-around;
   }
+}
 
 .header {
   display: flex;
@@ -102,66 +103,3 @@ input {
     width: 30vw;
   }
 }
-
-/*
-.header{
-    background-color: darkslategrey;
-    padding: 2.5vw;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-
-    button {
-      background: none;
-      border: none;
-      color: orangered;
-    }
-  
-    input {
-      background-color: orangered;
-      text-align: center;
-      border: none;
-      color: antiquewhite;
-      margin-left: 1vw;
-      border-radius: 2.5vw;
-      margin-right: 0.1em;
-      margin-left: 0.75em;
-    }
-  
-    input::placeholder {
-      text-align: center;
-      color: antiquewhite;
-    }
-
-    img {
-      width: 10vw;
-      height: auto;
-    }
-}
-
-@media  screen and (max-width: 768px) {
-  .header{
-    background-color: darkslategrey;
-    padding: 2.5vw;
-    padding-top: 5vw;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-  
-    input {
-      width: 40vw;
-    }
-
-    img {
-      width: 30vw;
-      height: auto;
-    }
-}
-}
-*/
