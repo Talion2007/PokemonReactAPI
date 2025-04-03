@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  
 }
 
 .main {
@@ -8,15 +9,24 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.main.claro {
-  background-color: #f5f5f5;
-  color: #333333;
+.main.white {
+  .header {
+    background-color: darkslategrey;
+    padding: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
-.main.escuro {
-  background-color: #1e1e1e;
-  color: #f5f5f5;
-}
+.main.dark {
+  .header {
+    background-color: lightseagreen;
+    padding: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
 .header {
   display: flex;
@@ -40,6 +50,7 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  font-size: large;
 }
 
 button:hover {
@@ -56,54 +67,101 @@ input {
   border-radius: 5px;
 }
 
-.header {
-  background-color: #444;
-  padding: 2.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #fff;
-}
-
 .header button {
-  background: none;
+  background: 0 0;
   border: none;
-  color: #ff4500;
+  color: orangered;
 }
-
 .header a {
   text-decoration: none;
-  color: #ff4500;
+  color: orangered;
 }
-
 .header input {
-  background-color: #ff4500;
+  background-color: orangered;
   text-align: center;
   border: none;
-  color: #fff;
+  color: antiquewhite;
   margin: 0 0.1em 0 0.75em;
   border-radius: 2.5vw;
 }
-
 .header input::placeholder {
   text-align: center;
-  color: #fff;
+  color: antiquewhite;
 }
-
 .header img {
   width: 10vw;
 }
-
 @media screen and (max-width: 768px) {
   .header {
     padding-top: 5vw;
   }
-
   .header input {
     width: 40vw;
   }
-
   .header img {
     width: 30vw;
   }
 }
+
+/*
+.header{
+    background-color: darkslategrey;
+    padding: 2.5vw;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+
+    button {
+      background: none;
+      border: none;
+      color: orangered;
+    }
+  
+    input {
+      background-color: orangered;
+      text-align: center;
+      border: none;
+      color: antiquewhite;
+      margin-left: 1vw;
+      border-radius: 2.5vw;
+      margin-right: 0.1em;
+      margin-left: 0.75em;
+    }
+  
+    input::placeholder {
+      text-align: center;
+      color: antiquewhite;
+    }
+
+    img {
+      width: 10vw;
+      height: auto;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+  .header{
+    background-color: darkslategrey;
+    padding: 2.5vw;
+    padding-top: 5vw;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+  
+    input {
+      width: 40vw;
+    }
+
+    img {
+      width: 30vw;
+      height: auto;
+    }
+}
+}
+*/
