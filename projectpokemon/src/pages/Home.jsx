@@ -11,7 +11,7 @@ function Home() {
   const [erro, setErro] = useState();
   const [theme, setTheme] = useState(() => {
     const temaSalvo = localStorage.getItem('tema');
-    return temaSalvo ? JSON.parse(localStorage.getItem('tema')) : true ;
+    return temaSalvo ? JSON.parse(localStorage.getItem('tema')) : true;
   });
 
   useEffect(() => {
