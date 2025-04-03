@@ -9,9 +9,9 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.main.white {
+.main.true {
   .header {
-    background-color: darkslategrey;
+    background-color: lightblue;
     padding: 2.5vw;
     display: flex;
     align-items: center;
@@ -19,9 +19,9 @@ body {
   }
 }
 
-.main.dark {
+.main.false {
   .header {
-    background-color: lightseagreen;
+    background-color: darkmagenta;
     padding: 2.5vw;
     display: flex;
     align-items: center;

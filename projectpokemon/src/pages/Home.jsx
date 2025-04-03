@@ -10,8 +10,8 @@ function Home() {
   const [dadosPokemon, setDadosPokemon] = useState({});
   const [erro, setErro] = useState();
   const [theme, setTheme] = useState(() => {
-    const temaSalvo = localStorage.getItem("teme");
-    return temaSalvo ? temaSalvo : "white";
+    const temaSalvo = localStorage.getItem('tema');
+    return temaSalvo ? JSON.parse(localStorage.getItem('tema')) : true ;
   });
 
   useEffect(() => {
@@ -45,11 +45,10 @@ function Home() {
     }
   };
 
-  const alternarTema = () => {
-    const novoTema = theme === "white" ? "dark" : "white";
-    setTheme(novoTema);
-    localStorage.setItem('tema', JSON.stringify(theme));
-  };
+  function alternarTema() {
+    setTheme(!theme);
+    localStorage.setItem('tema', JSON.stringify(!theme));
+  }
 
   return (
     <div className={`main ${theme}`}>
