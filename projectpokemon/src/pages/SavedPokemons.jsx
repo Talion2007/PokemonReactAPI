@@ -6,6 +6,10 @@ import SavedPokemonDisplay from "../components/SavedPokemonDisplay";
 
 function PokemonsSalvos() {
   const [pokemonsSalvos, setPokemonsSalvos] = useState([]);
+  const [theme, setTheme] = useState(() => {
+    const temaSalvo = localStorage.getItem('tema');
+    return temaSalvo ? JSON.parse(localStorage.getItem('tema')) : true ;
+  });
 
   useEffect(() => {
     const salvos = JSON.parse(localStorage.getItem("pokemonsSalvos")) || [];
@@ -20,7 +24,7 @@ function PokemonsSalvos() {
   }
 
   return (
-    <div className="main">
+    <div className={`main ${theme}`}>
       <header className="header">
         <img src={Logo} alt="Logo Pokémon" loading="lazy" />
         <div>

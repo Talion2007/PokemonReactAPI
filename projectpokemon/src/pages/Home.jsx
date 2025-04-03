@@ -59,8 +59,8 @@ function Home() {
             <Link to="/salvos">Pokémons Salvos</Link>
           </button>
           <input onChange={(e) => setPokemon(e.target.value)} placeholder={pokemon} />
+          <button onClick={salvarPokemon}>Salvar Pokemon</button>
           <button onClick={() => setPokemon(pokemon)}>Buscar</button>
-          <button onClick={salvarPokemon}>Salvar</button>
           <button onClick={alternarTema}>Alterar tema</button>
         </div>
       </header>
