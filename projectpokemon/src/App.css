@@ -27,7 +27,6 @@ body {
     align-items: center;
     justify-content: space-around;
   }
-}
 
 .header {
   display: flex;
@@ -55,16 +54,16 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: #ccc;
 }
 
 button:active {
-  background-color: #bbb;
+  background-color: #aaa;
 }
 
 input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 5px;
 }
 

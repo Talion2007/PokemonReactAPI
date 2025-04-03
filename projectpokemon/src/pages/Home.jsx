@@ -45,10 +45,14 @@ function Home() {
     }
   };
 
-  const toggleTheme = () => setTheme((prev) => (prev === "white" ? "dark" : "white"));
+  const alternarTema = () => {
+    const novoTema = tema === "claro" ? "escuro" : "claro";
+    setTema(novoTema);
+    localStorage.setItem("tema", novoTema);
+  };
 
   return (
-    <div className={`main ${theme}`}>
+    <div className={`main ${tema}`}>
       <header className="header">
         <img src={Logo} alt="Logo Pokémon" loading="lazy" />
         <div>
@@ -58,7 +62,7 @@ function Home() {
           <input onChange={(e) => setPokemon(e.target.value)} placeholder={pokemon} />
           <button onClick={() => setPokemon(pokemon)}>Buscar</button>
           <button onClick={salvarPokemon}>Salvar</button>
-          <button onClick={toggleTheme}>Tema: {theme === "white" ? "Dark" : "White"}</button>
+          <button onClick={alternarTema}>Tema: {tema === "claro" ? "Escuro" : "Claro"}</button>
         </div>
       </header>
       <DisplayPokemon pokemonData={dadosPokemon} error={erro} />
