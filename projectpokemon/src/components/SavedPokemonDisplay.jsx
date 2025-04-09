@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../styles/DisplayPokemon.css";
 
 function DisplayPokemonSalvo({ pokemon, onExcluir }) {

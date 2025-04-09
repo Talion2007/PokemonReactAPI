@@ -6,7 +6,7 @@ import SavedPokemonDisplay from "../components/SavedPokemonDisplay";
 
 function PokemonsSalvos() {
   const [pokemonsSalvos, setPokemonsSalvos] = useState([]);
-  const [theme, setTheme] = useState(() => {
+  const [theme] = useState(() => {
     const temaSalvo = localStorage.getItem('tema');
     return temaSalvo ? JSON.parse(localStorage.getItem('tema')) : true ;
   });
